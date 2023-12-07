@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteOff"
+    tools:context=".ui.fragments.MyDashBoardFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/llMedicalReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMedicalReport"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="@dimen/dp10"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_rectangle_red_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvMessage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/dp10"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp15" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:id="@+id/llMemberShip"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight=".5"
+                                android:background="#F9EBCF"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic__my_plan"
+                                    tools:ignore="UseAppTint" />
+
+                                <TextView
+                                    android:id="@+id/tvMemberShip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp12"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llEnterSugarValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight=".5"
+                                android:background="#FFF080"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:visibility="visible">
+
+
+                                <ImageView
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_quick_update"
+                                    tools:ignore="UseAppTint" />
+
+                                <TextView
+                                    android:id="@+id/tvEnterSugarValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="Enter Sugar value"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp12"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llGoogleFit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:id="@+id/llGoogleFitConnect"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="left"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:paddingBottom="@dimen/_5sdp"
+                                    android:visibility="visible"
+                                    android:weightSum="3">
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_gravity="left|center_vertical"
+                                        android:layout_weight="1"
+                                        android:background="#fff"
+                                        android:src="@drawable/googlefit"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/tvConnect"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical"
+                                        android:text="Googe Fit"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/sp12"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llFitness"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#ffffff"
+                                    android:padding="@dimen/_5sdp"
+                                    android:visibility="gone"
+                                    android:weightSum="3">
+
+                                    <LinearLayout
+                                        android:id="@+id/llSteps"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:paddingBottom="@dimen/_5sdp"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_22sdp"
+                                            android:layout_height="@dimen/_22sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_steps_icon"
+                                            tools:ignore="UseAppTint" />
+
+                                        <TextView
+                                            android:id="@+id/tvSteps"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:hint="0"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/sp12"
+                                            android:textStyle="bold"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llCal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:paddingBottom="@dimen/_5sdp"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_22sdp"
+                                            android:layout_height="@dimen/_22sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/calories_burn"
+                                            tools:ignore="UseAppTint" />
+
+                                        <TextView
+                                            android:id="@+id/tvCal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:hint="0"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/sp12"
+                                            android:textStyle="bold"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_2sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray" />
+
+                                    <LinearLayout
+                                        android:id="@+id/llHeartRate"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:paddingBottom="@dimen/_5sdp"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_22sdp"
+                                            android:layout_height="@dimen/_22sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/heart_rate"
+                                            tools:ignore="UseAppTint" />
+
+                                        <TextView
+                                            android:id="@+id/tvHeartRate"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:hint="0"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/sp12"
+                                            android:textStyle="bold"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvFoodDiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/llHeader"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:background="@drawable/drawable_edit_box"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Count your calories"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvFoodDiary"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:text="@string/health_parameter_charts"
+                    android:textColor="@color/line_color"
+                    android:textSize="@dimen/sp18"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/rvReminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_health"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dp20"
+                        android:text="No record Found "
+                        android:textColor="@color/line_color"
+                        android:textSize="@dimen/sp22"
+                        android:visibility="gone" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/share_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTitle"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/dp30"
+                        app:cardCornerRadius="@dimen/dp10"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/login_tv"
+                            style="@style/AppTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:background="@drawable/pink_selector"
+                            android:gravity="center"
+                            android:text="@string/set_your_health_profile"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp16" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_health"
+                    android:orientation="vertical"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/llNewsFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_container"
+                    android:layout_margin="@dimen/dp10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNewsFeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottom"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="@dimen/dp20"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnCallMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#080F5D"
+            android:src="@drawable/ic_call_24"
+            android:visibility="visible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:src="@drawable/ic_chat_24"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/llHealthPlan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFBC8F"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_doctor" />
+
+            <TextView
+                android:id="@+id/tvHealthPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Reduce Sugar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBookBlood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#F9EBCF"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_blood_test" />
+
+            <TextView
+                android:id="@+id/tvBookBlood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Book Tests"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMedicine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFF080"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_medicine" />
+
+            <TextView
+                android:id="@+id/tvMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Medicines"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

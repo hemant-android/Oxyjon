@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llRemark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFEEE6"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvRemarkTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium_500"
+            android:text="Remarks"
+            android:textColor="#FF5709"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvRemark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular_400"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgContent"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize5Percent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvContentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium_500"
+                android:lineSpacingExtra="4sp"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_12sdp"
+                android:translationY="-1.8sp" />
+
+            <TextView
+                android:id="@+id/tvContentDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular_400"
+                android:lineSpacingExtra="2sp"
+                android:maxLines="3"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_10sdp"
+                android:translationY="-0.97sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

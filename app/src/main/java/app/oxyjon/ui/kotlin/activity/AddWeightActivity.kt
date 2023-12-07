@@ -1,0 +1,230 @@
+package app.oxyjon.ui.kotlin.activity
+
+import android.app.DatePickerDialog
+import android.content.Intent
+import android.os.Bundle
+import android.text.TextUtils
+import android.widget.Toast
+import app.oxyjon.MainApplication
+import app.oxyjon.R
+import app.oxyjon.database.AppSharedPreferences
+import app.oxyjon.databinding.ActivityAddWeightBinding
+import app.oxyjon.retrofit.ApiCall
+import app.oxyjon.retrofit.IApiCallback
+import app.oxyjon.retrofit.response.UserDataResponse
+import app.oxyjon.ui.activity.BaseActivity
+import app.oxyjon.ui.kotlin.activity.adapter.CalendarAdapter
+import app.oxyjon.utils.CalendarData
+import app.oxyjon.utils.CheckConnection
+import app.oxyjon.utils.FunctionHelper
+import com.moengage.core.Properties
+import com.moengage.core.analytics.MoEAnalyticsHelper
+import org.json.JSONArray
+import org.json.JSONObject
+import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
+
+class AddWeightActivity : BaseActivity(), CalendarAdapter.CalendarInterface, IApiCallback {
+
+    private var yyyy_MM_dd: String? = ""
+    var preferences: AppSharedPreferences? = null
+
+    lateinit var binding: ActivityAddWeightBinding
+
+    private val sdf = SimpleDateFormat("dd MMMM, yyyy", Locale.ENGLISH)
+    private val sdf_yyyy_MM_dd = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
+
+    private val cal = Calendar.getInstance(Locale.ENGLISH)
+    private val calendarAdapter = CalendarAdapter(this, arrayListOf())
+
+    private val calendarList = ArrayList<CalendarData>()
+
+    private var profileId = ""
+    private var weight = ""
+
+
+    override fun onResume() {
+        super.onResume()
+        MainApplication.currentActivity = this
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityAddWeightBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        preferences = AppSharedPreferences.getInstance(this)
+
+        MainApplication.currentActivity = this
+
+        profileId = preferences!!.getprofileid()!!
+
+        init()
+        clickListener()
+        getDates()
+
+
+        binding.imgBack.setOnClickListener {
+            finish()
+        }
+
+        binding.tvSave.setOnClickListener {
+            if (TextUtils.isEmpty(yyyy_MM_dd)) {
+                Toast.makeText(this, "Please select date", Toast.LENGTH_SHORT).show()
+            } else if (TextUtils.isEmpty(binding.edtWeightValue.text.toString().trim())) {
+                Toast.makeText(this, "Please enter weight value", Toast.LENGTH_SHORT).show()
+            } else {
+                val array = JSONArray()
+                val jsonObject = JSONObject()
+                jsonObject.put("date", yyyy_MM_dd)
+                jsonObject.put("unit", "Kgs")
+                jsonObject.put("weight", binding.edtWeightValue.text.toString().trim())
+                weight = array.put(jsonObject).toString()
+                saveWeightValue(weight)
+
+                val properties = Properties()
+                properties.addAttribute("date", yyyy_MM_dd)
+                properties.addAttribute("unit", "Kgs")
+                properties.addAttribute("weight", binding.edtWeightValue.text.toString().trim())
+                MoEAnalyticsHelper.trackEvent(this, "WeightForm", properties)
+            }
+
+
+        }
+    }
+
+    override fun onSelect(calendarData: CalendarData, position: Int) {
+
+        // You can get Selected date here....
+        binding.tvMonthYearPicker!!.text = sdf.format(calendarData.data)
+        calendarList.forEachIndexed { index, calendarModel ->
+            calendarModel.isSelected = index == position
+        }
+
+        calendarAdapter.updateList(calendarList)
+        yyyy_MM_dd = sdf_yyyy_MM_dd.format(calendarData.data)
+    }
+
+    private fun init() {
+        binding.apply {
+
+            tvMonthYearPicker.text = sdf.format(cal.time)
+
+            yyyy_MM_dd = sdf_yyyy_MM_dd.format(cal.time)
+
+            calendarView.setHasFixedSize(true)
+            calendarView.adapter = calendarAdapter
+
+        }
+    }
+
+    private fun clickListener() {
+        binding.tvMonthYearPicker.setOnClickListener {
+//            displayDatePicker()
+            setupDatePickerDueDate()
+        }
+    }
+
+    private fun setupDatePickerDueDate() {
+        DatePickerDialog(
+            this, dateListenerFirstRegistrationDate,
+            // set DatePickerDialog to point to today's date when it loads up
+            cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)
+        ).show()
+
+    }
+
+    private val dateListenerFirstRegistrationDate =
+        DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfYear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updateDateFirstRegistration()
+        }
+
+    private fun updateDateFirstRegistration() {
+        val myFormat = "dd-MM-yyyy" // mention the format you need
+//        val sdf = SimpleDateFormat(myFormat, Locale.US)
+        binding.tvMonthYearPicker.text = sdf.format(cal.time)
+        yyyy_MM_dd = sdf_yyyy_MM_dd.format(cal.time)
+
+        getDates()
+    }
+
+    private fun getDates() {
+        val dateList = ArrayList<CalendarData>() // For our Calendar Data Class
+        val dates = ArrayList<Date>() // For Date
+
+
+        val monthCalendar = cal.clone() as Calendar
+        val maxDaysInMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH)
+
+
+        monthCalendar.set(Calendar.DAY_OF_MONTH, 1)
+
+
+        while (dates.size < maxDaysInMonth) {
+
+            dates.add(monthCalendar.time)
+            if (monthCalendar.time == cal.time) {
+                dateList.add(CalendarData(monthCalendar.time, true))
+            } else {
+                dateList.add(CalendarData(monthCalendar.time, false))
+            }
+//            dateList.add(CalendarData(monthCalendar.time))
+
+            monthCalendar.add(Calendar.DAY_OF_MONTH, 1)   // Increment Day By 1
+        }
+
+        calendarList.clear()
+        calendarList.addAll(dateList)
+        calendarAdapter.updateList(dateList)
+
+        for (i in calendarList.indices) {
+            if (calendarList[i].isSelected) {
+                binding.calendarView.scrollToPosition(i)
+            }
+        }
+    }
+
+    private fun saveWeightValue(weight: String) {
+        if (CheckConnection.isConnection(this)) {
+            FunctionHelper.disable_user_Intration(this, resources.getString(R.string.loading))
+            ApiCall.instance.saveWeightData(profileId, weight, this)
+        } else {
+            Toast.makeText(this, "please check your internet connection", Toast.LENGTH_SHORT)
+                .show()
+        }
+    }
+
+    override fun onSuccess(type: Any, data: Any, extraData: Any?) {
+        FunctionHelper.enableUserIntraction()
+        if (type == "addWeightData") {
+            val response = data as Response<UserDataResponse>
+            if (response.isSuccessful) {
+                if (response.body()!!.errorCode == "0") {
+
+                    val properties = Properties()
+                    properties.addAttribute("WeightFormSave", true)
+                    MoEAnalyticsHelper.trackEvent(this, "WeightForm", properties)
+
+                    val intent =
+                        Intent(this@AddWeightActivity, AddWeightRecordedActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, response.body()!!.errorMsg, Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        }
+    }
+
+    override fun onFailure(data: Any) {
+        FunctionHelper.enableUserIntraction()
+    }
+
+
+}

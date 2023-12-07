@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgBack"
+            android:fontFamily="@font/roboto_medium_500"
+            android:lineSpacingExtra="5sp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/_14sdp"
+            android:translationY="-2.62sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imgMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_message"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_toLeftOf="@+id/imgMessage"
+            android:src="@drawable/ic_notofication"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvSave"
+            android:layout_alignParentTop="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular_400"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Add Blood Pressure"
+                    android:textColor="#1E1E1E"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_18ssp" />
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular_400"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Blood Pressure (Systolic: Top number, Diastolic: Botton number in mm HG"
+                    android:textColor="#1E1E1E"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    android:translationY="-1.8sp" />
+
+                <TextView
+                    android:id="@+id/tvMonthYearPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/down_arrow" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_calendar_date" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Enter Systolic"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtSystolicValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:hint="00"
+                                android:inputType="number"
+                                android:lineSpacingExtra="4sp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_30sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:lineSpacingExtra="4sp"
+                                android:text="mm HG"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Enter Diastolic"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtDiastolicValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:hint="00"
+                                android:inputType="number"
+                                android:lineSpacingExtra="4sp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_30sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:lineSpacingExtra="4sp"
+                                android:text="mm HG"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Enter pulse"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtPluseValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:hint="00"
+                                android:inputType="number"
+                                android:lineSpacingExtra="4sp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_30sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:lineSpacingExtra="4sp"
+                                android:text="min"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Select Time"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llHr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvHr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:hint="00"
+                                android:inputType="number"
+                                android:lineSpacingExtra="3sp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_22sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Hr"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:alpha="0.2"
+                            android:background="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvMin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:hint="00"
+                                android:inputType="number"
+                                android:lineSpacingExtra="3sp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_22sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Min"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:alpha="0.2"
+                            android:background="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAMPM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvAMPM"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:hint="PM"
+                                android:inputType="number"
+                                android:lineSpacingExtra="3sp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:textColor="#000000"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/_22sdp"
+                                app:drawableEndCompat="@drawable/down_arrow" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Hr"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/_12sdp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:alpha="0.2"
+                            android:background="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/bg_orange"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:padding="@dimen/_10sdp"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12sdp"
+            android:translationY="-2.62sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

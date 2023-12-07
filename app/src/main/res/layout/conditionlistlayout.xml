@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:id="@+id/rvHeader">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Ear infections"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20"
+            android:paddingStart="@dimen/dp5"
+            android:paddingLeft="@dimen/dp5" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_below="@+id/rvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler"
+        android:layout_marginLeft="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
+

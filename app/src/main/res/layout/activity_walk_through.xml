@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dp10"
+            android:text="Welcome to Oxyjon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/hands_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp50"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp40"
+            android:src="@drawable/hands_logo" />
+
+        <ImageView
+            android:id="@+id/name_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_below="@id/hands_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:src="@drawable/name_logo_dark" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/idExoPlayerVIew"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llVideoView"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp10"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="@dimen/dp10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/tvMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/bg_pink_color"
+        android:gravity="center"
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15"
+        android:visibility="visible" />
+</RelativeLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo" />
+
+        <ImageView
+            android:id="@+id/imgMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_message"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_toLeftOf="@+id/imgMessage"
+            android:src="@drawable/ic_notofication"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvAddMember"
+        android:layout_below="@+id/rlHeader"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular_400"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:text="Add Family Member"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:text="Name"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_edit_box"
+                android:fontFamily="@font/roboto_regular_400"
+                android:inputType="textNoSuggestions"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#1E1E1E"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:text="Relationship"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/edtRelationShip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_edit_box"
+                android:fontFamily="@font/roboto_regular_400"
+                android:inputType="textNoSuggestions"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#1E1E1E"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_gender_default"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spRelation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:textColor="@drawable/text_selector_red_grey"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:drawableRight="@drawable/ic_drop_down"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:text="Mobile Number"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/edtMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_edit_box"
+                android:fontFamily="@font/roboto_regular_400"
+                android:inputType="number"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#1E1E1E"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:text="Note"
+                android:textColor="#1E1E1E"
+                android:visibility="gone"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/edtMessage"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_edit_box"
+                android:fontFamily="@font/roboto_regular_400"
+                android:gravity="top|left"
+                android:hint="Some thing about relaive"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#1E1E1E"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvAddMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@drawable/bg_orange"
+        android:fontFamily="@font/roboto_medium_500"
+        android:gravity="center"
+        android:lineSpacingExtra="5sp"
+        android:padding="@dimen/_10sdp"
+        android:text="Add Member"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_12sdp"
+        android:translationY="-2.62sp"
+        android:visibility="visible" />
+</RelativeLayout>

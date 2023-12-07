@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSkip"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular_400"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="Additional Information"
+            android:textColor="#1E1E1E"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular_400"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:textColor="#1E1E1E"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal"
+            android:translationY="-1.8sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_medium_500"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="Height"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/llFeet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight=".5"
+                android:background="@drawable/drawable_gender_default"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlFeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp">
+
+                    <Spinner
+                        android:id="@+id/spFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:textColor="@drawable/text_selector_red_grey"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:drawableRight="@drawable/ic_drop_down"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:gravity="center_vertical"
+                        android:hint="Feet"
+                        android:lineSpacingExtra="5sp"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="#1E1E1E"
+                        android:textColorHint="#1E1E1E"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llInches"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight=".5"
+                android:background="@drawable/drawable_gender_default"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlInches"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp">
+
+                    <Spinner
+                        android:id="@+id/spInches"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:textColor="@drawable/text_selector_red_grey"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvInches"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:drawableRight="@drawable/ic_drop_down"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:gravity="center_vertical"
+                        android:hint="Inches"
+                        android:lineSpacingExtra="5sp"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="#1E1E1E"
+                        android:textColorHint="#1E1E1E"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_medium_500"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="Weight"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium_500"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="Exercise in a week"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPhysicallyActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvNext"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_medium_500"
+        android:padding="@dimen/dp10"
+        android:text="Skip"
+        android:textColor="#1E2555"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/bg_orange"
+        android:fontFamily="@font/roboto_regular_400"
+        android:gravity="center"
+        android:lineSpacingExtra="5sp"
+        android:padding="@dimen/_10sdp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="visible" />
+</RelativeLayout>

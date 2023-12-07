@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"></fragment>
+
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.diary.DiaryFragment"
+        android:label="DiaryFragment"
+        tools:layout="@layout/fragment_diary"></fragment>
+
+    <fragment
+        android:id="@+id/planFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.plan.PlanFragment"
+        android:label="PlanFragment"
+        tools:layout="@layout/fragment_plan">
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/actionProfileToPointsRewardFragment"
+            app:destination="@id/pointsRewardFragment" />
+
+        <action
+            android:id="@+id/actionProfileToOrderItemFragment"
+            app:destination="@id/orderItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorConsultationFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.consultation.DoctorConsultationFragment"
+        android:label="DoctorConsultationFragment"
+        tools:layout="@layout/fragment_doctor_consultation"></fragment>
+
+    <fragment
+        android:id="@+id/pointsRewardFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.reward.PointsRewardFragment"
+        android:label="PointsRewardFragment"
+        tools:layout="@layout/fragment_points_rewards" />
+
+    <fragment
+        android:id="@+id/orderItemFragment"
+        android:name="app.oxyjon.ui.kotlin.fragment.order.OrderItemFragment"
+        android:label="OrderItemFragment"
+        tools:layout="@layout/fragment_order" />
+
+</navigation>

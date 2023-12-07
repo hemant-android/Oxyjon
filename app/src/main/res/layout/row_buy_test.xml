@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_120sdp"
+    android:layout_height="@dimen/_110sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBuyNow"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvHealthPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium_500"
+            android:lineSpacingExtra="4sp"
+            android:maxLines="2"
+            android:text="Sugar Reduction Plan"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp"
+            android:translationY="-1.8sp" />
+
+        <TextView
+            android:id="@+id/tvHealthPlanPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular_400"
+            android:gravity="center"
+            android:lineSpacingExtra="2sp"
+            android:text="₹999 for 1 month"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/_10sdp"
+            android:translationY="-0.97sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBuyNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFEEE6"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvBookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_medium_500"
+            android:gravity="center"
+            android:text="Book Now"
+            android:textColor="#FF5709"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow_fill" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_book_now_bottom_right_left_rounded_border"
+        android:orientation="horizontal" />
+</RelativeLayout>

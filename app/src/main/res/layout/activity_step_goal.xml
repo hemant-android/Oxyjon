@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_notofication"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader"
+        android:layout_above="@+id/rlBottom"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4sp"
+                        android:text="Set Step Goal"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4sp"
+                        android:text="10000 daily steps is a good target. If you wish, customize your target."
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:translationY="-1.8sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@mipmap/walking" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/roboto_medium_500"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4sp"
+                        android:text="Daily Steps"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/imgMinius"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_minius_blue" />
+
+                        <EditText
+                            android:id="@+id/edtSteps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/roboto_regular_400"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lineSpacingExtra="4sp"
+                            android:maxLines="1"
+                            android:text="7500"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/_25sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgPlus"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_plus_blue" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/roboto_medium_500"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4sp"
+                        android:text="How to Connect"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:lineSpacingExtra="4sp"
+                        android:text="Connect the step to get your step count and calorie data"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:translationY="-1.8sp" />
+
+                    <ImageView
+                        android:id="@+id/imgConnect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@mipmap/g_connect"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/llConnected"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/fit_circle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:gravity="center_vertical"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Google Fit Connected "
+                            android:textColor="#60BA1A"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvSetGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_orange"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:padding="@dimen/_10sdp"
+            android:text="Set Goal"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12sdp"
+            android:translationY="-2.62sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSetGoalDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_orange_disable"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:padding="@dimen/_10sdp"
+            android:text="Set Goal"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12sdp"
+            android:translationY="-2.62sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

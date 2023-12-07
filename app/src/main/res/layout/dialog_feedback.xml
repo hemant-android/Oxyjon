@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_background"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular_400"
+                android:text="Feedback"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:text="How did you like the service?"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium_500"
+                android:text="Which area you like mostly?"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvSelectOneLike"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_gender_default"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_regular_400"
+                android:hint="Select One"
+                android:lineSpacingExtra="5sp"
+                android:padding="@dimen/_8sdp"
+                android:textColor="#1E1E1E"
+                android:textColorHint="#1E1E1E"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:text="Which are the areas where we need improvement?"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvSelectOneImprove"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/drawable_gender_default"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_regular_400"
+                android:hint="Select One"
+                android:lineSpacingExtra="5sp"
+                android:padding="@dimen/_8sdp"
+                android:textColor="#1E1E1E"
+                android:textColorHint="#1E1E1E"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium_500"
+                android:text="Add Note (Optional)"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_10ssp" />
+
+            <EditText
+                android:id="@+id/edtAddNot"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_black_ractangle"
+                android:fontFamily="@font/roboto_regular_400"
+                android:gravity="top|start"
+                android:hint="Add Message Here"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_orange"
+                android:fontFamily="@font/roboto_regular_400"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Submit"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

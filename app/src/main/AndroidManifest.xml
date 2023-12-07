@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="com.truecaller.android.sdk" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+
+    <permission
+        android:name="${applicationId}.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
+
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:exported="false"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/app_icon_circle"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeFinal"
+        android:usesCleartextTraffic="true"
+        tools:overrideLibrary="com.android.volley|com.avenues.lib.testotpappnew"
+        tools:replace="android:allowBackup"
+        tools:targetApi="m">
+
+
+        <activity
+            android:name=".ui.kotlin.activity.StressManagementActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.PhysicalActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.ThingsAvoidActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.DietChartDetailActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.DietChartActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.EditProfileActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.MyCarePlanActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.SettingActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.StaticWebPageActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.SummeryActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AllergyActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AddFamilyMemberActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.MyCareTeamActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AnalyticsReportActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.BlogDetailActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.ViewBPActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.kotlin.activity.ViewWeightActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.kotlin.activity.DocumentListActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.kotlin.activity.UploadDocumentActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.kotlin.activity.AddWeightRecordedActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AddBPRecordedActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AddWeightActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AddBloodPressureActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.CongratulationActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.kotlin.activity.GoogleFitStepActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.ViewSugarActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.NotificationListActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.TestBookActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.DietPlanDetailActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.PlanDetailActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.EditDiaryActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AddDiaryActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.SaveAlarmActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.MedicineListActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.FoodDiaryActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.StepsRecordedActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.StepGoalActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.DashboardActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.SugarRecordedActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.kotlin.activity.AddSugarActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.BenefitActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.kotlin.activity.DoctorConsultationActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.OtpVerifyActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.AddMedicineActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <tools:validation testUrl="https://oxyjon.com/login" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.QuestionFirstActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.activity.QuestionSecondActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oxyjon.page.link"
+                    android:scheme="https" />
+                <data
+                    android:host="oxyjon.page.link"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <!-- Branch App Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="example.app.link"
+                    android:scheme="https" />
+                <!-- example-alternate domain is required for App Links when the Journeys/Web SDK and Deepviews are used inside your website.  -->
+                <data
+                    android:host="example-alternate.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="example.test-app.link"
+                    android:scheme="https" />
+                <!-- example-alternate domain is required for App Links when the Journeys/Web SDK and Deepviews are used inside your website.  -->
+                <data
+                    android:host="example-alternate.test-app.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebasenotification.NotificationReceive"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <service
+            android:name="com.moengage.firebase.MoEFireBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.AlarmBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.NOTIFY" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".receiver.NotifJobIntentService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:name=".service.FoodDiaryService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--For Xiaomi push-->
+
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.moengage.mi.MoEMiPushReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Facebook Id -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1234"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="app.oxyjon.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.truecaller.android.sdk.PartnerKey"
+            android:value="@string/partnerKey" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <!-- Razor Pay API key here -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="@string/razorPayKey" />
+
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_ai5TVZ59nwPCCLtOX0iwbcnlFthcqGrW" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_bo6NR155iELqtKsPZ0be8ffmuEkeAIzJ" />
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" />     <!-- Set to true to use Branch_Test_Key (useful when simulating installs and/or switching between debug and production flavors) -->
+
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+
+</manifest>

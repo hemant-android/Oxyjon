@@ -1,0 +1,235 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+// Apply the Performance Monitoring plugin
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'androidx.navigation.safeargs'
+
+android {
+    compileSdkVersion 33
+    flavorDimensions "default"
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 65
+        versionName "9.6"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file('./src/main/oxyjonrelease.jks')
+            storePassword 'Oxyjon!!123*'
+            keyAlias 'Oxyjon'
+            keyPassword 'Oxyjon!!123*'
+        }
+        debug {
+            storeFile file('./src/main/oxyjonrelease.jks')
+            storePassword 'Oxyjon!!123*'
+            keyPassword 'Oxyjon!!123*'
+            keyAlias 'Oxyjon'
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    productFlavors {
+        Develop {
+            applicationId "app.oxyjon.dev"
+            buildConfigField "String", "SERVER_URL", '"https://devapi.oxyjon.com/"'
+            signingConfig signingConfigs.debug
+        }
+        Prod {
+            applicationId "app.oxyjon"
+            buildConfigField "String", "SERVER_URL", '"https://api.oxyjon.com/"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0', 'META-INF/*.kotlin_module', 'META-INF/DebugProbesKt.bin']
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'app.oxyjon'
+}
+repositories {
+    maven { url 'https://artifacts.netcore.co.in/artifactory/android' }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.libraries.places:places:3.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.hbb20:ccp:2.3.6'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'pub.devrel:easypermissions:0.2.0'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.5'
+    implementation 'ly.count.android:sdk:20.11.10'
+    implementation platform('com.google.firebase:firebase-bom:29.2.0')
+    // Declare the dependency for the Performance Monitoring library
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
+    implementation 'com.google.firebase:firebase-dynamic-links-ktx'
+//    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    //truecaller
+    implementation "com.truecaller.android.sdk:truecaller-sdk:2.8.0"
+    // used For Auto OTP Detection
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    // OTP View
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
+
+    // For Facebook
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
+    // For Zoom Image
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+//    implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
+
+    // for sdp size of content
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // dependency for exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.5'
+
+// for core support in exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.5'
+
+// for adding dash support in our exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+
+// for adding hls support in exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
+
+// for smooth streaming of video in our exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0'
+
+// for generating default ui of exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+
+    // for Razor pay
+    implementation 'com.razorpay:checkout:1.6.18'
+    // Fitness API
+    implementation 'com.google.android.gms:play-services-fitness:21.0.1'
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+    implementation 'net.danlew:android.joda:2.9.9.2'
+
+    //room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    implementation "androidx.room:room-runtime:2.5.0"
+    kapt "androidx.room:room-compiler:2.5.0"
+
+    // Run time permission
+    implementation 'com.karumi:dexter:6.2.3'
+
+    // For horizontal Calendar
+    implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
+
+    // required for all Android apps
+    implementation 'io.branch.sdk.android:library:5.+'
+    // required if your app is in the Google Play Store (tip: avoid using bundled play services libs)
+//    implementation 'com.google.android.gms:play-services-ads-identifier:17.1.0+'
+    // Chrome Tab matching (enables 100% guaranteed matching based on cookies)
+    implementation 'androidx.browser:browser:1.5.0'
+
+    implementation 'com.google.firebase:firebase-appindexing:20.0.0'
+
+    implementation 'com.moengage:moe-android-sdk:12.6.01'
+
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.lifecycle:lifecycle-process:2.5.1")
+    implementation("com.moengage:inbox-ui:2.1.1")
+    implementation("com.moengage:inapp:6.5.0")
+    implementation("com.moengage:rich-notification:4.3.1")
+    implementation("com.moengage:push-amp-plus:5.1.2")
+
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Navigation Component
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    // Circular progress
+    implementation 'com.github.yuriy-budiyev:circular-progress-bar:1.2.3'
+
+    // Flexible view
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.google.android.play:core:1.10.3' //to initiate AppUpdateManager
+
+    implementation 'eu.dkaratzas:android-inapp-update:1.0.5'
+
+    // Image picker
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+    // EncryptedSharedPreferences
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+
+    // for splash api
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+
+    // for youtubeplayer
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.3'
+
+}
+
+

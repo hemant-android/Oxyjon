@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/dp20">
+
+    <RelativeLayout
+        android:id="@+id/rl_prevailing_since"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingRight="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp8"
+        android:background="@drawable/custome_shape_rectangle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_toStartOf="@+id/ll_btn"
+            android:layout_toLeftOf="@+id/ll_btn"
+            android:layout_marginRight="@dimen/dp10">
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/date_07_02_2019"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:textColor="@color/line_color"
+            android:textSize="@dimen/sp16" />
+        <TextView
+            android:id="@+id/tv_hdl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/hdl"
+            android:textColor="@color/line_color"
+            android:textSize="@dimen/sp16" />
+        <TextView
+            android:id="@+id/tv_ldl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/ldl"
+            android:textColor="@color/line_color"
+            android:textSize="@dimen/sp16" />
+        <TextView
+            android:id="@+id/tv_vldl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vldl"
+            android:layout_marginBottom="@dimen/dp10"
+            android:textColor="@color/line_color"
+            android:textSize="@dimen/sp16" />
+            <TextView
+                android:id="@+id/tv_triglycerides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:text="@string/triglycerides"
+                android:textColor="@color/line_color"
+                android:textSize="@dimen/sp16" />
+            <TextView
+                android:id="@+id/tv_totalCholesterol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:text="@string/enter_totalCholesterol"
+                android:textColor="@color/line_color"
+                android:textSize="@dimen/sp16" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/ll_btn"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:src="@drawable/delete_blue" />
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_height="@dimen/dp30"
+                android:src="@drawable/edit_blue" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

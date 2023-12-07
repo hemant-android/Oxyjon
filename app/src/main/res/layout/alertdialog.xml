@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:paddingBottom="@dimen/dp40"
+            android:clipToPadding="true"
+            android:background="@drawable/shape_rectangle_white">
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20">
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:src="@drawable/close_blue"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_close"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/you_have_completed_your_free_section_please_upgrade_your_membership"
+                    android:textColor="@color/line_color"
+                    android:textSize="@dimen/sp20" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_header"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp20"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/pink_color"
+                    app:cardCornerRadius="@dimen/dp25"
+                    app:cardElevation="@dimen/dp10"
+                    android:id="@+id/cardUpgrade"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="@dimen/dp150"
+                        android:layout_height="@dimen/dp45"
+                        android:gravity="center"
+                        android:text="Upgrade"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp20" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

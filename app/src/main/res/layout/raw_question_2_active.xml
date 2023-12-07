@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/AppTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_edit_box"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_10ssp"
+        android:text="Before breakfast"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp10" />
+</LinearLayout>

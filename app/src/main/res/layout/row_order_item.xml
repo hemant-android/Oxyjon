@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pink_light"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pink_light_circle"
+                android:fontFamily="@font/roboto_regular_400"
+                android:gravity="center"
+                android:lineSpacingExtra="5sp"
+                android:padding="@dimen/_10sdp"
+                android:text="AB"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium_500"
+                android:gravity="center"
+                android:lineSpacingExtra="5sp"
+                android:text="Store Name"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvStoreAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular_400"
+                android:lineSpacingExtra="5sp"
+                android:text="Amrapali Dream Valley, Greater Noida"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium_500"
+        android:lineSpacingExtra="4sp"
+        android:text="Items"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular_400"
+        android:lineSpacingExtra="5sp"
+        android:text="5 X medicine name, 24 x medicine Name"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium_500"
+        android:lineSpacingExtra="4sp"
+        android:text="Ordered On"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular_400"
+        android:lineSpacingExtra="5sp"
+        android:text="5 X medicine name, 24 x medicine Name"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium_500"
+        android:lineSpacingExtra="4sp"
+        android:text="TOTAL"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular_400"
+        android:lineSpacingExtra="5sp"
+        android:text="1342.80"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#949494" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_medium_500"
+            android:lineSpacingExtra="4sp"
+            android:text="Delivered"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_repeat"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_medium_500"
+            android:lineSpacingExtra="4sp"
+            android:text="Repeat Order"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+</LinearLayout>

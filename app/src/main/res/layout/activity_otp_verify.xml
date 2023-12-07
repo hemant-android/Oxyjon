@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/hands_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp80"
+        android:src="@mipmap/otp_verify" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular_400"
+        android:gravity="center"
+        android:lineSpacingExtra="4sp"
+        android:text="OTP Verification"
+        android:textColor="#1E1E1E"
+        android:textSize="@dimen/_18sdp" />
+
+    <TextView
+        android:id="@+id/login_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_marginRight="@dimen/dp40"
+        android:fontFamily="@font/roboto_medium_500"
+        android:lineSpacingExtra="4sp"
+        android:text="Enter OTP"
+        android:textColor="@color/blue_color"
+        android:textSize="@dimen/_10ssp" />
+
+    <com.mukesh.OtpView
+        android:id="@+id/otpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:inputType="number"
+        android:itemBackground="@android:color/transparent"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:itemCount="4"
+        app:itemSpacing="30sp"
+        app:itemWidth="40sp"
+        app:lineColor="#1E1E1E"
+        app:lineWidth="1dp"
+        app:viewType="rectangle" />
+
+
+    <TextView
+        android:id="@+id/tvResendOpen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvResendOtp"
+        style="@style/AppTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/reSend"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        android:background="@drawable/bg_orange"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:lineSpacingExtra="5sp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/verify"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="500"
+        android:textSize="@dimen/_12sdp"
+        android:translationY="-2.62sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+

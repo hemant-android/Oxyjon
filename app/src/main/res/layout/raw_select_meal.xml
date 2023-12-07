@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:background="@drawable/bg_rectangle_fill"
+        android:fontFamily="@font/roboto_regular_400"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:text="Breakfast"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+</LinearLayout>

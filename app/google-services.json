@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "980578547498",
+    "firebase_url": "https://oxyjon-cdb36.firebaseio.com",
+    "project_id": "oxyjon-cdb36",
+    "storage_bucket": "oxyjon-cdb36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980578547498:android:ce0de9d612b65986b09053",
+        "android_client_info": {
+          "package_name": "app.oxyjon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980578547498-55prctkvenkvpipri394i6sgejhoa811.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.oxyjon",
+            "certificate_hash": "8c44684b7ad1906b034abcfe67ca6bf21374e705"
+          }
+        },
+        {
+          "client_id": "980578547498-7e59jprhtdq89272tokcc8rgt7e0grfc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.oxyjon",
+            "certificate_hash": "7ec796fe2b9f51262ae585a729b34632d4179823"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwzxlugFb5pAcVR7IArepOJIiqSulApAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980578547498-thb1j3rq8ub5odhtaoph9neth8ju5glm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980578547498:android:d9fb386fdf919124b09053",
+        "android_client_info": {
+          "package_name": "app.oxyjon.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980578547498-9ovn8ng2larn43p9sm9adb2lc502kajo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.oxyjon.dev",
+            "certificate_hash": "8c44684b7ad1906b034abcfe67ca6bf21374e705"
+          }
+        },
+        {
+          "client_id": "980578547498-i87md2gm0tknhenimnntr7dah4in0ff7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.oxyjon.dev",
+            "certificate_hash": "7ec796fe2b9f51262ae585a729b34632d4179823"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwzxlugFb5pAcVR7IArepOJIiqSulApAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980578547498-thb1j3rq8ub5odhtaoph9neth8ju5glm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

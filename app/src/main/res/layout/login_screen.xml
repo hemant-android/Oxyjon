@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp"
+                    android:layout_marginTop="@dimen/_20sdp" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    app:dotsColor="#D9D9D9"
+                    app:dotsSize="12dp"
+                    app:dotsSpacing="5dp"
+                    app:selectedDotColor="#1E2555" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium_500"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4sp"
+                        android:text="@string/mobile_number_hint"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <EditText
+                        android:id="@+id/user_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/drawable_edit_box"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:hint="Enter Mobile Number"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="#1E1E1E"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/bg_orange"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:gravity="center"
+                        android:lineSpacingExtra="5sp"
+                        android:padding="@dimen/_10sdp"
+                        android:text="Login"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_12sdp"
+                        android:translationY="-2.62sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/check_box_iv"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp5"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:src="@drawable/selector_remember_me" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp20"
+                            android:layout_marginRight="@dimen/dp20"
+                            android:layout_toEndOf="@id/check_box_iv"
+                            android:layout_toRightOf="@id/check_box_iv"
+                            android:fontFamily="@font/roboto_regular_400"
+                            android:lineSpacingExtra="5sp"
+                            android:text="@string/remember_me"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            android:translationY="-2.62sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llTruecaller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/drawable_edit_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTrueCaller"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@mipmap/truecaller_logo"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:lineSpacingExtra="5sp"
+                android:text="Continue with Truecaller"
+                android:textColor="#1E1E1E"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTermAndCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_regular_400"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:padding="@dimen/_5ssp"
+            android:text="By proceeding you agree to the Terms &amp; Conditions and Privacy Policy."
+            android:textColor="#FF5709"
+            android:textSize="@dimen/_10sdp"
+            android:translationY="-2.62sp" />
+
+        <View
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="#1C1B1F" />
+    </LinearLayout>
+</RelativeLayout>

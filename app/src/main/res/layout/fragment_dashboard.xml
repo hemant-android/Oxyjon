@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular_400"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo" />
+
+        <ImageView
+            android:id="@+id/imgPremium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/imgNotification"
+            android:src="@drawable/ic_premium"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_notofication" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/llDoctorProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgDr"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize5Percent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvDrName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/tvDrAddress"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:lineSpacingExtra="4sp"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/_12sdp"
+                            android:translationY="-1.8sp" />
+
+                        <TextView
+                            android:id="@+id/tvDrAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_pin"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:lineSpacingExtra="2sp"
+                            android:maxLines="3"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/_10sdp"
+                            android:translationY="-0.97sp" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvDrSpecialist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular_400"
+                        android:lineSpacingExtra="2sp"
+                        android:maxLines="1"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/_10sdp"
+                        android:translationY="-0.97sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgBannerB2B"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:visibility="gone"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize5Percent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTopBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_top_banner" />
+
+            <LinearLayout
+                android:id="@+id/llGoogleFitConnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGoogleFitTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_yellow_top_right_rounded"
+                        android:fontFamily="@font/roboto_medium_500"
+                        android:lineSpacingExtra="5sp"
+                        android:padding="@dimen/_10sdp"
+                        android:text="Please connect the step counter"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlConnected"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/framStep"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium_500"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Action of the day"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <TextView
+                                android:id="@+id/tvConnectedFitDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular_400"
+                                android:lineSpacingExtra="2sp"
+                                android:text="Achieve your step goal to see reduction in your sugar"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/framStep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center">
+
+                            <com.budiyev.android.circularprogressbar.CircularProgressBar
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                app:animateProgress="true"
+                                app:backgroundStrokeColor="#D9D9D9"
+                                app:backgroundStrokeWidth="@dimen/_3sdp"
+                                app:drawBackgroundStroke="true"
+                                app:foregroundStrokeCap="round"
+                                app:foregroundStrokeColor="#E5A500"
+                                app:foregroundStrokeWidth="@dimen/_3sdp"
+                                app:indeterminate="false"
+                                app:maximum="100"
+                                app:progress="75"
+                                app:startAngle="270" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_step"
+                                app:tint="#E5A500" />
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlConnect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:src="@mipmap/google_fit" />
+
+                        <TextView
+                            android:id="@+id/tvGoogleConnect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_connect"
+                            android:fontFamily="@font/roboto_regular_400"
+                            android:paddingLeft="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_7sdp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHealthScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@drawable/bg_white"
+                android:padding="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvHealthScore">
+
+                    <TextView
+                        android:id="@+id/tvHealthScoreTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_green"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_medium_500"
+                        android:lineSpacingExtra="5sp"
+                        android:textColor="#60BA1A"
+                        android:textSize="@dimen/_11ssp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvHealthScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="#60BA1A"
+                    android:textSize="@dimen/_12ssp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/row_action_box_dashboard" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPromotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_promotion_dashboard" />
+
+            <LinearLayout
+                android:id="@+id/llByPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Buy Plan"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBuyPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_buy_plan" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Available Tests"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_buy_plan" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Recipes"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRecipes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_recipes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium_500"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Our Blogs"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNesFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_news_feed" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

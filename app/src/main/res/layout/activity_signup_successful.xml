@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SignupSuccessfulActivity">
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    >
+
+        <ImageView
+            android:id="@+id/stethoscope_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp140"
+            android:src="@drawable/stethoscope_sad_icon"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_below="@id/stethoscope_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_check_your_email_and_verify_email"
+            android:layout_centerHorizontal="true"
+            style="@style/AppTextStyle"
+            android:textSize="@dimen/sp20"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp80"
+            android:gravity="center"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

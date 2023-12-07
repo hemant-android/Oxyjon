@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="@dimen/dp20"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_margin="@dimen/dp20"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:text="@string/choose_your_plan"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/black_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"/>
+            <LinearLayout
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/dp20"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/rl_per_month"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/shape_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_height="@dimen/dp150">
+                    <LinearLayout
+                        android:id="@+id/ll_first"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_rp"
+                        android:src="@drawable/rupyee_red"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40" />
+                    <TextView
+                        android:text="@string/_250"
+                        android:textSize="@dimen/sp30"
+                        android:textColor="@color/pink_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView
+                        android:text="@string/per_month"
+                        android:textSize="@dimen/sp15"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/pink_color"
+                        android:layout_below="@+id/ll_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_per_year"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/shape_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_height="@dimen/dp150">
+                    <LinearLayout
+                        android:id="@+id/ll_second"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/rupyee_red"
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40" />
+                        <TextView
+                            android:text="@string/_1500"
+                            android:textSize="@dimen/sp30"
+                            android:textColor="@color/pink_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView
+                        android:text="per year"
+                        android:textSize="@dimen/sp15"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/pink_color"
+                        android:layout_below="@+id/ll_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

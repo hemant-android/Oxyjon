@@ -1,0 +1,651 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Oxyjon</string>
+
+    <!--TrueCaller id, zamooram@gmail.com(oxyjon@6)-->
+    <!--App Development partnerKey for trueCaller-->
+    <!--<string name="partnerKey">V7wWfc9b73dad03484483aa048ff44c535eb3</string>-->
+    <!--App Release partnerKey for trueCaller-->
+    <string name="partnerKey">NDFSne31e8da513e24e2dba586e113ae1a6f3</string>
+
+    <!--Facebook id, zamooram@gmail.com(oxyjon@6)-->
+    <string name="facebook_app_id">477487313815260</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">7b2473e3af3e16724cd1f4d3818a4571</string>
+
+    // Razor pay test environment key
+    <!--<string name="razorPayKey">rzp_test_njNfk7muWHiuTP</string>-->
+    // Razor pay live environment key
+    <string name="razorPayKey">rzp_live_MMreqachMTmLFQ</string>
+
+    <string name="please_enter_your_username_and_password_to_login">Please enter your mobile number to login</string>
+    <string name="username">Username</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="mobile_number_hint">Mobile Number</string>
+    <string name="city">City</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="by_signing_up_you_are_agree_to_our_terms_conditions_and_privacy_policy">By signing up you agree to Terms and Conditions and Privacy Policy</string>
+    <string name="loading">Loading</string>
+    <string name="check_connection">Please check your internet conneciiton.</string>
+    <string name="please_check_your_email_and_verify_email">Please check your email and verify email.</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="michael_smirth">Michael Smirth</string>
+    <string name="my_dashboard">My Dashboard</string>
+    <string name="my_health">My Health</string>
+    <string name="my_services">Health Checkups</string>
+    <string name="membership_plans">Buy Diabetes Plan</string>
+    <string name="emergency">Emergency</string>
+    <string name="about_us">About us</string>
+    <string name="logout">Logout</string>
+    <string name="weight_report">Weight report</string>
+    <string name="weight_in_kgs">(weight in KGs)</string>
+    <string name="feb_12_2019">Feb,12,2019</string>
+    <string name="health_parameter_charts">Health Parameter Charts</string>
+    <string name="continue_btn">Continue</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="when_were_you_born">When were you born?</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="address">Address</string>
+    <string name="residing_in">Residing In</string>
+    <string name="aadhar_card_number">Aadhar Card Number</string>
+    <string name="medical_insurance_number">Medical Insurance Number</string>
+    <string name="dd">DD</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="support">Support</string>
+    <string name="share_app">Share app</string>
+    <string name="privacy_policy">Privacy and Policy</string>
+    <string name="email_address">Email Address</string>
+    <string name="a_new_password_has_been_sent_on_your_email_address">A new password has been sent to your e-mail address.</string>
+    <string name="please_enter_your_e_mail_address_we_will_send_you_a_new_password"><![CDATA[Please enter your e-mail address & we will send you a new password.]]></string>
+    <string name="amoxicillin">Amoxicillin</string>
+    <string name="asprin">Asprin</string>
+    <string name="diclofenac">Diclofenac</string>
+    <string name="allergy">Allergy</string>
+    <string name="add_more">   Add  </string>
+    <string name="add">Add More</string>
+    <string name="remove">Remove</string>
+    <string name="pancreatic_cancer">Health Conditions</string>
+    <string name="pain_in_the_abdomen_or_middle_back">Pain in the abdomen or middle back</string>
+    <string name="fluid_in_the_abdomen_or_lump_in_the_abdomen">Fluid in the abdomen or lump in the abdomen</string>
+    <string name="nausea_or_vomiting">Nausea or vomiting</string>
+    <string name="blood_in_stool_or_pale_color">Blood in stool or pale color</string>
+    <string name="severity">Severity</string>
+    <string name="_11_02_2019">11.02.2019</string>
+    <string name="time">Time</string>
+    <string name="pm">PM</string>
+    <string name="weight_loss">Weight loss</string>
+    <string name="diarrhea">Diarrhea</string>
+    <string name="malaise">Malaise</string>
+    <string name="elevated_blood_sugars">Elevated blood sugars</string>
+    <string name="jaundice">Jaundice</string>
+    <string name="escalation_of_symptom_least_severe_5_most_severe_1">Escalation of Symptom \n (Least severe, 5: Most severe :1)</string>
+    <string name="systolic_top_number_diastolic_bottom_number_in_mm_hg">(Systolic: Top number, Diastolic: Bottom number in \'mm HG\')</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="enter_systolic">Ente]r Systolic</string>
+    <string name="enter_diastolic">Enter Diastolic</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="date_07_02_2019">Date : 07.02.2019</string>
+    <string name="time_3_06_am">Time: 3:06 AM</string>
+    <string name="systolic_469282">Systolic: 469282</string>
+    <string name="diastolic_469282">Diastolic: 469282</string>
+    <string name="am">AM</string>
+    <string name="in_mg_dl">(in mg/dL)</string>
+    <string name="enter_pulse_rate">Enter Pulse Rate</string>
+    <string name="enter_lavel">Enter Level</string>
+    <string name="enter_hdl">Enter HDL</string>
+    <string name="enter_ldl">LDL</string>
+    <string name="enter_vldl">VLDL</string>
+    <string name="enter_triglycerides">Triglycerides</string>
+    <string name="in_ng_ml">( In ng/ml )</string>
+    <string name="date">Date</string>
+    <string name="in">( in % )</string>
+    <string name="in_miu_ml">( in mIU/ml )</string>
+    <string name="non_medical_intervention">Non-Medical Intervention</string>
+    <string name="treatment">Treatment</string>
+    <string name="enter_medicine">Search Medicine</string>
+    <string name="procedure">Procedure</string>
+    <string name="procedure_date">Procedure Date</string>
+    <string name="enter_procedure_cost">Enter Procedure Cost</string>
+    <string name="treatment_provider">Treatment Provider</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="end_date">End Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="upload_your_medical_prescriptions_test_reports">Upload Your Medical prescription/ Test reports</string>
+    <string name="note_only_images_png_jpg_gif_and_pdf_are_allowed_of_size_less_than_2mb">Note: Only Image(PNG, JPG, GIF) and PDF files of size less than 2MB are allowed.</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="submit">Submit</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="pick_image_from">Pick Image From</string>
+    <string name="upload_documents_from">Upload Documents From</string>
+    <string name="pdf">PDF</string>
+    <string name="lorem_ipsum_dolor_sit_amet_appareat_hendreit_per_id_ius_errem_iudico">Lorem ipsum dolor sit amet, appareat hendreit per id, ius errem iudico</string>
+    <string name="create_health_profile_for_yourselft_or_a_family_member">Create health profile for yourself or a family member</string>
+    <string name="access_your_profile_anywhere_anytime_on_any_device">Access your profile anywhere, anytime on any device</string>
+    <string name="maintain_history_of_health_conditions">Maintain history of health conditions</string>
+    <string name="keep_track_of_your_symptoms_and_health_parameters">Keep track of your symptoms and health parameters</string>
+    <string name="upload_your_prescriptions_and_lab_test_reports_5_mb_free">Upload your prescriptions and lab test reports (50 MB Free)</string>
+    <string name="choose_this_plan">Choose this Plan</string>
+    <string name="remotely_share_your_bp_pulse_and_sugar_levels_with_your_doctor">Remotely share your BP, Pulse, and Sugar levels with your doctor</string>
+    <string name="solicit_doctor_recommendation_and_blood_donation_through_sms">Solicit doctor recommendation and blood donation through SMS</string>
+    <string name="choose_your_plan">Choose your plan</string>
+    <string name="_250">250</string>
+    <string name="per_month">per month</string>
+    <string name="_1500">1500</string>
+    <string name="_50_mo">50/Mo</string>
+    <string name="enter_file_name">Enter File Name</string>
+    <string name="upload_your_prescriptions_and_lab_test_reports_100_mb">Upload your prescriptions and lab test reports (upto 200 MB)</string>
+    <string name="hdl">HDL:</string>
+    <string name="ldl">LDL:</string>
+    <string name="vldl">VLDL:</string>
+    <string name="done">Done</string>
+    <string name="triglycerides">Triglycerides:</string>
+    <string name="file_name">File Name</string>
+    <string name="document_type">Document Type</string>
+    <string name="my_health_record">My Health Record</string>
+    <string name="quick_update">Quick Update</string>
+    <string name="family_health">Family Health</string>
+    <string name="family_history_is_an_important_indicator_of_potential_health_risks_maintaining_your_family_history_can_help_in_proactive_interventions_to_reduce_health_issues">Family history is an important indicator of potential health risks. Maintaining your family history can help in proactive interventions to reduce health issues.</string>
+    <string name="relationship_with_james">Relationship with James</string>
+    <string name="enter_condition">Enter Condition</string>
+    <string name="age_of_relative_when_condition_started">Age of relative when condition started</string>
+    <string name="relationship">Relationship :</string>
+    <string name="conditon">Conditon:</string>
+    <string name="year">Year :</string>
+    <string name="family_health_">Family Health</string>
+    <string name="age_in_year">Age in years</string>
+    <string name="preventive_health_check_plans">Preventive Health Check Plans</string>
+    <string name="doctor_recommendation">Doctor Recommendation</string>
+
+    <string name="create_blood_request">Create Blood Request</string>
+    <string name="dear_james">Dear James</string>
+    <string name="you_can_request_for_bolld_donation_through_this_page_our_registered_members_in_your_city_will_see_this_request_and_you_will_get_their_responses_through_email_and_sms">You can request for blood donation through this page. Our registered members in your city will see this request and you will get their responses through email and SMS.</string>
+    <string name="hospital_clinic_address">Hospital/ Clinic address</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="city_where_blood_is_needed">City where Blood is needed</string>
+    <string name="select_city">Select City</string>
+    <string name="need_blood">Need Blood</string>
+    <string name="click_to_compare">Click to compare</string>
+    <string name="package_name">Package Name:</string>
+    <string name="glucose_fasting_and_post_meal">Glucose, Fasting and Post Meal</string>
+    <string name="lab">Lab:</string>
+    <string name="dr_lal_pathlabs">Dr. Lal Pathlabs</string>
+    <string name="_150">150</string>
+    <string name="address_">Address:</string>
+    <string name="www_lalpathlabs_com"><u>www.lalpathlabs.com</u></string>
+    <string name="gurgaon">Gurgaon</string>
+    <string name="contact_number">Contact Number:</string>
+    <string name="_1800_222_000"><u>1800 222 000</u></string>
+    <string name="add_to_compare">Add to compare</string>
+    <string name="health_checup_packages">Health Checkup Packages</string>
+    <string name="pick_location">Pick Location</string>
+    <string name="search_by">Search by :</string>
+    <string name="sex">Sex</string>
+    <string name="any">Any</string>
+    <string name="age">Age</string>
+    <string name="package_detail">Package detail</string>
+    <string name="hospital_lab_name">Hospital/Lab Name:</string>
+    <string name="package_categories">Package Categories:</string>
+    <string name="diabetic_check">Diabetic Check</string>
+    <string name="package_for">Package for:</string>
+    <string name="all_male_and_female_of_age_18_39_40_49_60_and_above">All male and female of age 18-39,40-49,60 and above</string>
+    <string name="available_lab_tests">Available Lab Tests:</string>
+    <string name="blood_sugar_fasting"><u>Blood Sugar Fasting</u></string>
+    <string name="blood_sugar_pp"><u>Blood Sugar PP</u></string>
+    <string name="compare_health_checkup_packages">Compare Health Checkup Packages</string>
+    <string name="price">Price</string>
+    <string name="unique_tests_in_this_package">Unique tests in this package</string>
+    <string name="common_tests_across_these_packages">Common tests across these packages</string>
+    <string name="urine_routine">Urine Routine</string>
+    <string name="ask_for_doctor_reference">Ask for Doctor Reference</string>
+    <string name="create_doc_recommendation">Create Doc Recommendation</string>
+    <string name="you_can_ask_forum_members_to_recommend_specialist_in_your_city_through_this_page_our_registered_members_will_see_this_request_and_you_will_get_their_responses_through_e_mail_and_sms">You can ask forum members to recommend specialist, in your city, through this page. Our registered members will see this request and you will get their responses through e-mail and SMS.</string>
+    <string name="request">Request</string>
+    <string name="about_us_">About Us</string>
+    <string name="as_a_society_we_face_multiple_challenges_in_the_healthcare_delivery_striving_through_and_building_our_lives_we_all_have_seen_and_faced_the_issues_such_as_finding_emergency_information_missing_doctor_prescriptions_and_tracking_our_own_health_in_a_meaningful_manner">As a society we face multiple challenges in the healthcare delivery. Striving through and building our lives, we all have seen and faced the issues such as finding emergency information, missing doctor prescriptions and tracking our own health in a meaningful manner.</string>
+    <string name="the_team_at_oxyjon_has_benn_through_these_experiences_itself_which_has_led_to_the_setting_up_of_this_platform_we_strive_to_deliver_and_solve_the_most_complex_of_the_healthcare_challenges_in_our_society_the_team_comes_from_a_collage_of_experiences_with_some_of_the_best_institutions_in_india_we_invite_your_to_become_part_of_our_story_whether_as_a_user_contributor_or_a_team_member">The team at Oxyjon has benn through these experiences itself, which has led to the setting up of this platform. We strive to deliver and solve the most complex of the healthcare challenges in our society. The team comes from a collage of experiences with some of the best institutions in India. We invite your to become part of our story whether as a user, contributor or a team member.</string>
+    <string name="user_profile">User Profile</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="save_condition">Save Condition</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old password</string>
+    <string name="enter_your_new_password_below_we_re_just_being_extra_safe">Enter your new password below we\'re just being extra safe</string>
+    <string name="new_password">New password</string>
+    <string name="health_summary">Health Summary</string>
+    <string name="health_summary_">Health Summary:</string>
+    <string name="link_to_share">Health Summary link to share with Doctor</string>
+    <string name="_28_year_male">28 Year, Male</string>
+    <string name="condition">Condition:</string>
+    <string name="current_medication">Current Medication:</string>
+    <string name="past_procedures">Past Procedures:</string>
+    <string name="symptoms">Symptoms:</string>
+    <string name="allergies">Allergies:</string>
+    <string name="ampicillin_furosemide_penicilin_sulfamethizole">Ampicillin, Furosemide, Penicilin, Sulfamethizole</string>
+    <string name="blood_pressure_">Blood Pressure :</string>
+    <string name="_87788_897897">87788/897897</string>
+    <string name="_5_am_dt_08_01_2018">5 AM Dt. 08.01.2018</string>
+    <string name="pulse">Pulse :</string>
+    <string name="list_view">List View</string>
+    <string name="map_view">Map View</string>
+    <string name="emergency_places">Emergency Places</string>
+    <string name="neelkanth_hospital">Neelkanth Hospital</string>
+    <string name="mehrauli_gurgaon_road_near_d_l_f_corporate_park_phase_iii">Mehrauli Gurgaon Road, Near D.L.F Corporate Park, Phase-III</string>
+    <string name="_0_km">0 KM</string>
+    <string name="hospital">#Hospital</string>
+    <string name="chemist">#Chemist</string>
+    <string name="ambulance">#Ambulance</string>
+    <string name="blood_bank">#Bloodbank</string>
+    <string name="filter">Filter</string>
+    <string name="by_city">By City</string>
+    <string name="by_locality">By Locality</string>
+    <string name="search_by_locality">Search by Locality</string>
+    <string name="by_type">By Type</string>
+    <string name="chemist_">Chemist</string>
+    <string name="hospital_">Hospital</string>
+    <string name="bloodbank">Bloodbank</string>
+    <string name="ambulance_">Ambulance</string>
+    <string name="log_in_sign_up">Log in / Sign up</string>
+    <string name="cholesterol_report">Cholesterol report</string>
+    <string name="hdl_">HDL</string>
+    <string name="triglycerides_">Triglycerides</string>
+    <string name="ldl_">LDL</string>
+    <string name="vldl_">VLDL</string>
+    <string name="sugar_fasting_report">Sugar (Fasting) report</string>
+    <string name="sugar_in_mg_dl">Sugar in mg/dl</string>
+    <string name="sugar_pp_report">Sugar (PP) report</string>
+    <string name="sugar_random_report">Sugar (Random) report</string>
+    <string name="hba1c_report">HBA1C Report</string>
+    <string name="hba1c_in">(HBA1C in)</string>
+    <string name="psa_report">PSA report</string>
+    <string name="psa_in_ng_ml">(PSA in ng/ml)</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="blood_pressure_report">Blood Pressure Report</string>
+    <string name="blood_pressure_in_mm_hg">Blood pressure in mm HG</string>
+    <string name="tsh_report">TSH Report</string>
+    <string name="tsh_in_mlu_ml">(TSH in mlU/Ml)</string>
+    <string name="pulse_report">Pulse report</string>
+    <string name="write_here">Write Here...</string>
+    <string name="_11_20_am">11:20 Am</string>
+    <string name="name_michael_smirth">Name : Michael Smirth</string>
+    <string name="start_date_12_02_2019">Start Date: 12.02.2019</string>
+    <string name="valid_till_11_02_2020">Valid Till: 11.02.2020</string>
+    <string name="change_plan">Change Plan</string>
+    <string name="guest">Guest</string>
+
+    <!-- AIzaSyCRqAoRzhW4AyD_J-p7oci7v9c55zw0qbg-->
+    <!--AIzaSyBJvN_HtaZmN6aOgHKwjf9YKc6jJuoLfDE-->
+    <string name="api_key">AIzaSyB49MVHyD37EcIqAXIroUQNuchNd9-vYkc</string>
+    <string name="tracking_message">Do you want to stop tracking "selected parameter"</string>
+    <string name="write_file">This app needs access to your file storage so that it can write files.</string>
+    <string name="blood_pressure_tab">Blood Pressure</string>
+    <string name="sugar_tab">Sugar</string>
+    <string name="pulse_tab">Pulse</string>
+    <string name="weight_tab">Weight</string>
+    <string name="cholesterol_tab">Cholesterol</string>
+    <string name="psa_tab">PSA</string>
+    <string name="hbac">HBA1C</string>
+    <string name="tsh">TSH</string>
+    <string name="health_conditions">Health Conditions</string>
+    <string name="blood_pressure_systolic_top_number_diastolic_bottom_number_in_mm_hg">Blood Pressure ( Systolic: Top number, Diastolic: Bottom number in \'mm HG\' )</string>
+
+    <string name="sugar_in_mg_dll">Sugar ( in mg/dL )</string>
+    <string name="weight">Weight</string>
+    <string name="cholesterol">Cholesterol</string>
+
+
+    <!--tabdata.add(new Tablist(false,"Blood Pressure"));
+    tabdata.add(new Tablist(false,"Sugar"));
+    tabdata.add(new Tablist(false,"Pulse"));
+    tabdata.add(new Tablist(false,"Weight"));
+    tabdata.add(new Tablist(false,"Cholesterol"));
+    tabdata.add(new Tablist(false,"PSA"));
+    tabdata.add(new Tablist(false,"HBA1C"));
+    tabdata.add(new Tablist(false,"TSH"));-->
+
+
+    <string name="lab_package">Lab Package</string>
+    <string name="blood_request">Blood Request</string>
+    <string name="please_input_your_current_paarword">Please Enter Old Password</string>
+    <string name="please_input_your_new_password">Please Enter New Password</string>
+    <string name="password_not_matched_to_your_new_password">Password doesn\'t match!</string>
+    <string name="please_input_your_new_password_again">please input your new password again</string>
+    <string name="please_check_your_connection">please check your connection</string>
+    <string name="invite_friend">Share App</string>
+    <string name="how_it_works" tools:ignore="ExtraTranslation">How it works</string>
+    <string name="set_your_health_profile">Set your Health Profile</string>
+    <string name="you_must_select_health_parameter_s_in_the_my_health_record_section_to_start_tracking_them">You must select health parameter(s) in the My Health Record section to start tracking them</string>
+    <string name="we_are_yet_to_launch_this_service_in_your_city">There are no packages available with this selection</string>
+    <string name="notification">Notifications</string>
+    <string name="share_your_health_summary">Share Health Summary</string>
+    <string name="yesterday">yesterday</string>
+    <string name="type_a_message">type a message</string>
+    <string name="medicines_treatment">Treatment</string>
+    <string name="health_parameters">Health Parameters</string>
+    <string name="share_health_parameters">Share Health Parameters</string>
+    <string name="share_parameter">Please select parameter(s) you want to share with your treatment provider</string>
+    <string name="my_treatment_provider">My treatment provider</string>
+    <string name="terms">I have read privacy policy and agree to share my health parameters with treatment provider</string>
+    <string name="frequency_of_sharing">Frequency of Sharing</string>
+    <string name="share_health_parameter_text">You can share your health parameter(s) with your treatment provider for effective tracking of your health. To update health parameters, click here. To add or edit treatment provider details, click here. </string>
+    <string name="update_step_four">To update health conditions, click here.</string>
+    <string name="update_step_five">To update health parameters, click here.</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="you_have_completed_your_free_section_please_upgrade_your_membership">You have completed your free section ,please upgrade your membership.</string>
+
+    <string name="accessCode">AVZV03IB42BW70VZWB</string>
+    <string name="merchantId">98753</string>
+    <string name="currency">INR</string>
+    <!--<string name="redirectUrl">https://appsinvo.com/payment_oxyjon/ccavResponseHandler.php</string>
+
+    &lt;!&ndash;https://appsinvo.com&ndash;&gt;
+    <string name="cancelUrl">https://appsinvo.com/payment_oxyjon/ccavResponseHandler.php</string>
+    <string name="rsaurl">https://appsinvo.com/payment_oxyjon/GetRSA.php</string>-->
+    <string name="if_you_are_either_a_gold_or_platinum_member">You can set your Share health parameter settings if you are a Gold member. Please click here to purchase membership.</string>
+    <string name="please_click_here_for_go_to_homepage">Please click here to go to homepage.</string>
+    <string name="title_text">Take the first step towards better health</string>
+    <string name="get_access_to_diabetes_educator">Get access to diabetes educator</string>
+
+    <string name="need_more_space_for_your_health_records_switch_to_our_gold_plan_summary">Need more space for your health records? Switch to our Gold Plan Summary.</string>
+    <string name="change_storage_to_200_mb">Change storage to 200 MB</string>
+    <string name="_1000">1500</string>
+    <string name="per_year">per year</string>
+    <string name="_100">100</string>
+    <string name="free_membership_50_mb">Free membership : 50 mb</string>
+    <string name="free_plan_provide_full_list_of_available_services_just_like_the_gold_plan_just_the_storage_capacity_will_be_50_mb_in_text">Full list of available services just like the gold plan. Just the storage capacity will be 50 MB in text</string>
+    <string name="congaratulations_you_have_successfully_purchased_the_gold_membership_plan">Congaratulations! You have successfully purchased the Gold membership plan.</string>
+    <string name="create_health_profile_for_yourself_or_a_family_member">Create health profile for yourself or a family member</string>
+    <string name="upload_your_prescriptions_and_lab_test_reports_up_50_mb">Upload your prescriptions and lab test reports (upto 50 MB).</string>
+    <string name="test_suggestion">Test Suggestion</string>
+    <string name="the_suggested_tests_are_based_on_the_risk_profile_determined_by_age_and_gender_selected_by_you_speak_to_your_doctor_to_understand_specific_tests_needed_based_on_your_health_condition">The suggested tests are for the risk profile determined by age and gender selected by you. Speak to your doctor to understand specific tests needed based on your health condition</string>
+    <string name="want_personalised_support_through_a_health_coach_switch_to_our_gold_plan">Want personalised support through a health coach ? Switch to our Gold Plan</string>
+    <string name="get_access_to_a_diabetes_educator">Get access to a diabetes educator</string>
+    <string name="please_check_oxyjon_app">Hi! Checkout Oxyjon, the most Trusted App to Prevent, Manage &amp; Reverse your Diabetes</string>
+    <string-array name="dd">
+        <item>DD</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+    <string-array name="mm">
+        <item>MM</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Minute">
+        <item>Minute</item>
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="Hour">
+        <item>Hour</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="AM">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+    <string-array name="type">
+        <item>Type</item>
+        <item>Fasting</item>
+        <item>PP</item>
+        <item>BeforeLunch</item>
+        <item>AfterLunch</item>
+        <item>BeforeDinner</item>
+        <item>AfterDinner</item>
+        <item>Midnight</item>
+        <item>Random</item>
+    </string-array>
+    <string-array name="kqs">
+        <item>Kgs</item>
+        <item>Lbs</item>
+    </string-array>
+    <string-array name="frequency">
+        <item>Frequency</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>SOS</item>
+    </string-array>
+    <string-array name="frequencylist">
+        <item>Frequency of Sharing</item>
+        <item>3 days</item>
+        <item>7 days</item>
+        <item>15 days</item>
+    </string-array>
+    <string-array name="recommend_doctor">
+        <item>Recommend Doctor</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="document_type">
+        <item>Document type</item>
+        <item>Medical prescription</item>
+        <item>Lab test report</item>
+    </string-array>
+    <string-array name="severity">
+        <item>Severity</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="relationship">
+        <item>Relationship</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Sibling</item>
+        <item>Son</item>
+        <item>Daughter</item>
+    </string-array>
+    <string-array name="blood_group">
+        <item>Blood Group</item>
+        <item>O+</item>
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>O-</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="age">
+        <item>Any</item>
+        <item>11 and bellow</item>
+        <item>12-17</item>
+        <item>18-39</item>
+        <item>40-59</item>
+        <item>60 and above</item>
+    </string-array>
+
+    <string name="treatment_provideer_status">Treatment provider is being used in Share health parameter. First remove this provider from Share health parameters and then remove it from here.</string>
+    <string name="Rs">\u20B9</string>
+    <string name="activate">Activate</string>
+    <string name="some_error_occurred">Some Error Occurred</string>
+    <string name="verify">Verify</string>
+    <string name="default_notification_channel_id">com_oxyjon_channel_id</string>
+    <string name="profile">Profile</string>
+    <string name="upload_your_documents">Upload Your Documents</string>
+    <string name="height">Height(Feet &amp; Inch)</string>
+    <string name="feet">Feet</string>
+    <string name="inches">"Inch"</string>
+    <string name="enter_totalCholesterol">Total Cholesterol</string>
+    <string name="sugar_before_lunch_report">Sugar (BeforeLunch) report</string>
+    <string name="sugar_after_lunch_report">Sugar (AfterLunch) report</string>
+    <string name="sugar_after_dinner_report">Sugar (AfterDinner) report</string>
+    <string name="sugar_before_dinner_report">Sugar (BeforeDinner) report</string>
+    <string name="sugar_mid_night_report">Sugar (MidNight) report</string>
+    <string name="next">Next</string>
+    <string name="healthReport">Health Report</string>
+    <string name="reSend">Resend</string>
+    <string name="_599">599</string>
+    <string name="_499">499</string>
+    <string name="_999">999</string>
+    <string name="_2499">2499</string>
+    <string name="_4499">4499</string>
+    <string name="_7999">7999</string>
+    <string name="intro_text">Hi! Let\'s see you\'ve done steps</string>
+    <string name="action_revoke">Revoke permissions</string>
+    <string name="setting">Setting</string>
+    <string name="addMedicine">Add New Medicine</string>
+    <string name="viewMedicine">My Medicines</string>
+    <string name="Medicines">Medicines</string>
+    <string name="setReminder">Set Medicine Reminder</string>
+    <string name="enter_quantity">Enter quantity</string>
+    <string name="addFoodDiary">Add Food Diary</string>
+    <string name="searchFood">Search Food</string>
+    <string name="viewFoodDiary">My Food Diary</string>
+    <string name="editFoodDiary">Edit Food Diary</string>
+    <string-array name="dose">
+        <item>Select Dose</item>
+        <item>GM</item>
+        <item>ML</item>
+        <item>Number</item>
+    </string-array>
+    <string-array name="selectFoodTime">
+        <item>Select Time</item>
+        <item>Early Morning</item>
+        <item>Breakfast</item>
+        <item>Morning Snack</item>
+        <item>Lunch</item>
+        <item>Evening Snack</item>
+        <item>Dinner</item>
+        <item>Bed Time</item>
+    </string-array>
+
+    <string name="areYouSureYouWantToLogout">You really want to log-out?</string>
+    <string name="logoutTitle">Leaving to soon!</string>
+    <string name="SkipForNow"><u>Skip for Now</u></string>
+</resources>
+
+
+
+

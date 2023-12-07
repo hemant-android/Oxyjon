@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <app.oxyjon.utils.otpview.PinEditText
+        android:id="@+id/otp_one_edit_text"
+        style="@style/labelText"
+        android:background="@drawable/bg_border_bottom_otp"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp35"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:textSize="@dimen/sp15"
+        android:importantForAutofill="no"
+        tools:targetApi="o"
+        android:autofillHints="AUTOFILL_HINT_SMS_OTP"
+        android:nextFocusLeft="@+id/otp_one_edit_text"
+        android:nextFocusRight="@+id/otp_two_edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/otp_two_edit_text"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <requestFocus />
+    </app.oxyjon.utils.otpview.PinEditText>
+
+    <app.oxyjon.utils.otpview.PinEditText
+        android:id="@+id/otp_two_edit_text"
+        style="@style/labelText"
+        android:background="@drawable/bg_border_bottom_otp"
+        android:layout_width="28dp"
+        android:layout_height="@dimen/dp35"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:textSize="@dimen/sp15"
+        android:importantForAutofill="no"
+        tools:targetApi="o"
+        android:autofillHints="AUTOFILL_HINT_SMS_OTP"
+        android:nextFocusLeft="@+id/otp_one_edit_text"
+        android:nextFocusRight="@+id/otp_three_edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/otp_three_edit_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/otp_one_edit_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <app.oxyjon.utils.otpview.PinEditText
+        android:id="@+id/otp_three_edit_text"
+        style="@style/labelText"
+        android:textColor="@color/pink_color_selected"
+        android:background="@drawable/bg_border_bottom_otp"
+        android:layout_width="@dimen/dp28"
+        android:layout_height="@dimen/dp35"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:textSize="@dimen/sp15"
+        android:importantForAutofill="no"
+        tools:targetApi="o"
+        android:autofillHints="AUTOFILL_HINT_SMS_OTP"
+        android:nextFocusLeft="@+id/otp_two_edit_text"
+        android:nextFocusRight="@+id/otp_four_edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/otp_four_edit_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/otp_two_edit_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <app.oxyjon.utils.otpview.PinEditText
+        android:id="@+id/otp_four_edit_text"
+        style="@style/labelText"
+        android:background="@drawable/bg_border_bottom_otp"
+        android:layout_width="@dimen/dp28"
+        android:layout_height="@dimen/dp35"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:textSize="@dimen/sp15"
+        android:importantForAutofill="no"
+        tools:targetApi="o"
+        android:autofillHints="AUTOFILL_HINT_SMS_OTP"
+        android:nextFocusLeft="@+id/otp_three_edit_text"
+        android:nextFocusRight="@+id/otp_five_edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/otp_three_edit_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
